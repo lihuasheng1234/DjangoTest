@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from GetAPI import views as GetAPI_views
+from app01 import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('test/',GetAPI_views.page),
-    path('app01/', include('app01.urls')),
+    path('showform/',views.showform),
+    path('testform/',views.testForm),
+    path('testuploadfileform/',views.test_uploadfile_form),
+    path('testextends/',views.testextends),
+    path('testforminstance/',views.testForm_instance),
 
 ]
